@@ -1,5 +1,6 @@
 import 'package:isar/isar.dart';
 import 'package:isar_example/collections/category.dart';
+part 'routine.g.dart';
 
 @Collection()
 class Routine {

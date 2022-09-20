@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:isar/isar.dart';
+import 'package:isar_example/collections/category.dart';
+import 'package:isar_example/collections/routine.dart';
+import 'package:path_provider/path_provider.dart';
 
-void main() {
+void main() async {
+  //Where to save the Database Instance
+  final dir = await getApplicationSupportDirectory();
+  //Initialization of ISAR DB instance named 'isar'
+  final isar =
+      await Isar.open([RoutineSchema, CategorySchema], directory: dir.path);
   runApp(const MyApp());
 }
 
